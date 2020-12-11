@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+  crossorigin="anonymous">
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <title>Weather Copy</title>
+</head>
+<body>
+  <div class="container ">
+    <form id="search-form"> 
+      <input type="search" placeholder="search" id="input-form" />
+      <button type="button" class="btn btn-secondary btn-sm">Current</button>
+  </form>
+ 
+  <h2>Chicago</h2>
+  <h6>Mon, Dec 10</h6>
+<h1>23°C <span class="iconify" data-icon="wi:day-sunny" data-inline="false" data-width="50"
+  data-height="50"></span><span id="description">Sunny</span></h1>
+<br/>
+<br/>
+<br/>
+<p class="break-line">Details</p>
+  <div class="row row-cols-3">
+    <div class="col">
+      <i class="fas fa-temperature-high"></i><br/>
+      Feels like
+      <h5>22°C</h5>
+    </div>
+    <div class="col">
+      <i class="fas fa-wind"></i>
+      <br/>
+      Wind
+      <h5> 5km/h </h5>
+    </div>      
+    <div class="col">
+      <i class="fas fa-tint"></i>
+      <br/>Humidity
+      <h5> 15% </h5>
+    </div>      
+    <div class="col">
+      <br/>
+      <i class="fas fa-tachometer-alt"></i>
+      <br/>Preasure
+      <h5> 24.25 </h5>
+    </div>
+    <div class="col">
+      <br/>
+      <i class="far fa-eye"></i>
+      <br/>Visibility
+      <h5> N/A </h5>
+    </div>
+    <div class="col">
+      <br/>
+      <i class="fas fa-temperature-low"></i>
+      <br/>Dew point
+      <h5> 4 </h5>
+    </div>
+</div>
+<br/>
+<p class="break-line">Forecast</p>
+  <div class="row row-cols-5">
+    <div class="col">Mon,11
+      <h5> <span id="high-temp-first-day"><br/>24°C</span>
+        <br />
+        <span id="low-temp-first-day">7°C</span>
+      </h5>
+      <i class="fas fa-wind"></i>
+    </div>
+    <div class="col">Tue,12
+      <h5> <span id="high-temp-first-day"><br/>24°C</span>
+        <br />
+        <span id="low-temp-first-day">7°C</span>
+      </h5> 
+      <i class="fas fa-cloud-showers-heavy"></i>
+    </div>
+    <div class="col">Wed,13
+      <h5> <span id="high-temp-first-day"><br/>24°C</span>
+        <br />
+        <span id="low-temp-first-day">7°C</span>
+      </h5>
+      <i class="fas fa-sun"></i>
+    </div>
+    <div class="col">Thu,14
+      <h5> <span id="high-temp-first-day"><br/>24°C</span>
+        <br />
+        <span id="low-temp-first-day">7°C</span>
+      </h5>
+      <i class="fas fa-sun"></i>
+    </div>
+    <div class="col">Fri,15
+      <h5> <span id="high-temp-first-day"><br/>24°C</span>
+        <br />
+        <span id="low-temp-first-day">7°C</span>
+      </h5><i class="fas fa-cloud"></i>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  </div>
+  <script src="https://kit.fontawesome.com/10686f6f91.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
