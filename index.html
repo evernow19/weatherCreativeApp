@@ -22,9 +22,10 @@
  
   <h2>Chicago</h2>
   <h6>Mon, Dec 10</h6>
-<h1>23°C <span class="iconify" data-icon="wi:day-sunny" data-inline="false" data-width="50"
-  data-height="50"></span><span id="description">Sunny</span></h1>
-<br/>
+<h1><span id="temperature">23°C</span>
+   <i class="fas fa-sun"></i>
+  <span id="description">Sunny</span>
+</h1>
 <br/>
 <br/>
 <p class="break-line">Details</p>
@@ -32,24 +33,24 @@
     <div class="col">
       <i class="fas fa-temperature-high"></i><br/>
       Feels like
-      <h5>22°C</h5>
+      <h5 id="feels-like">22°C</h5>
     </div>
     <div class="col">
       <i class="fas fa-wind"></i>
       <br/>
       Wind
-      <h5> 5km/h </h5>
+      <h5 id="wind"> 5km/h </h5>
     </div>      
     <div class="col">
       <i class="fas fa-tint"></i>
       <br/>Humidity
-      <h5> 15% </h5>
+      <h5 id="humidity"> 15% </h5>
     </div>      
     <div class="col">
       <br/>
       <i class="fas fa-tachometer-alt"></i>
-      <br/>Preasure
-      <h5> 24.25 </h5>
+      <br/>Pressure
+      <h5 id="pressure"> 24.25 </h5>
     </div>
     <div class="col">
       <br/>
@@ -67,8 +68,8 @@
 <br/>
 <p class="break-line">Forecast</p>
   <div class="row row-cols-5">
-    <div class="col">Mon,11
-      <h5> <span id="high-temp-first-day"><br/>24°C</span>
+    <div class="col"><span id="today-forecast">Mon,11</span>
+      <h5><br/> <span id="high-temp-first-day">24°C</span>
         <br />
         <span id="low-temp-first-day">7°C</span>
       </h5>
