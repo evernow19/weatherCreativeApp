@@ -1,7 +1,7 @@
 // Feature 1
 let now = new Date();
 let h6 = document.querySelector("h6");
-let todayForecast = document.querySelector("#today-forecast");
+let todayForecast = document.querySelector("#forecast-day-one");
 let todayDateForecast = document.querySelector("#today-date-forecast");
 
 let days = [
@@ -33,13 +33,13 @@ let month = months[now.getMonth()];
 let date = now.getDate();
 
 h6.innerHTML = `${day}, ${month} ${date}`;
-todayForecast.innerHTML = `${day},${date}`;
+
 
 //Feature 2
 let search = document.querySelector("#search-form");
-search.addEventListener("submit", locationSearch);
+search.addEventListener("submit", citySearch);
 
-function locationSearch(event) {
+function citySearch(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#input-form");
   let h2 = document.querySelector("h2");
@@ -78,3 +78,19 @@ function showTemperature(response) {
   let firstDayTempLow = Math.round(response.data.main.temp_min);
   lowTemp.innerHTML = `${firstDayTempLow}°C`;
 }
+
+function searchLocation(position) {
+  let apiKey = "4fbc3ff7a1e9263c52d408ae5dfa41bf";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}
+  &lon=${position.coords.longitude}&appid=${apiKey}`;
+ console.log(apiUrl);
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
