@@ -17,19 +17,24 @@
   <div class="container ">
     <form id="search-form"> 
       <input type="search" placeholder="search" id="input-form" />
-      <button type="button" class="btn btn-secondary btn-sm">Current</button>
+      <button type="button" class="btn btn-secondary btn-sm" id="current-location-button">Current</button>
   </form>
  
   <h2>Chicago</h2>
   <h6>Mon, Dec 10</h6>
 <h1><span id="temperature">23°C</span>
-   <i class="fas fa-sun"></i>
+   <i class="fas fa-sun" id="main-icon"></i>
   <span id="description">Sunny</span>
 </h1>
 <br/>
 <br/>
 <p class="break-line">Details</p>
   <div class="row row-cols-3">
+    <div class="col">
+      <i class="fas fa-temperature-high"></i><br/>
+      Temp high
+      <h5 id="high-temp-first-day"> 22°C </h5>
+    </div> 
     <div class="col">
       <i class="fas fa-temperature-high"></i><br/>
       Feels like
@@ -40,31 +45,26 @@
       <br/>
       Wind
       <h5 id="wind"> 5km/h </h5>
-    </div>      
+    </div>     
     <div class="col">
+      <br/>
+      <i class="fas fa-temperature-low"></i><br/>
+      Temp low
+      <h5 id="low-temp-first-day"> 12°C </h5>
+    </div>   
+    <div class="col">
+      <br/>
       <i class="fas fa-tint"></i>
       <br/>Humidity
       <h5 id="humidity"> 15% </h5>
-    </div>      
+    </div>  
     <div class="col">
       <br/>
       <i class="fas fa-tachometer-alt"></i>
       <br/>Pressure
       <h5 id="pressure"> 24.25 </h5>
     </div>
-    <div class="col">
-      <br/>
-      <i class="far fa-eye"></i>
-      <br/>Visibility
-      <h5> N/A </h5>
     </div>
-    <div class="col">
-      <br/>
-      <i class="fas fa-temperature-low"></i>
-      <br/>Dew point
-      <h5> 4 </h5>
-    </div>
-</div>
 <br/>
 <p class="break-line">Forecast</p>
   <div class="row row-cols-5">
